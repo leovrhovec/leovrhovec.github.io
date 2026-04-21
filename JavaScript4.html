@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>ispit datuma i vremena</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+//vrijeme u sredini
+var danas= new Date();
+var dan=danas.getDate();
+var mjesec=danas.getMonth();
+mjesec=mjesec+1;
+var godina=danas.getFullYear();
+var datum=dan+"/"+mjesec+"/"+godina;
+var sat=danas.getHours();
+var min=danas.getMinutes();
+var sek=danas.getSeconds();
+var vrijeme=sat+":"+min+":"+sek;
+</SCRIPT>
+</HEAD>
+<BODY>
+Danasnji datum je:
+<SCRIPT LANGUAGE="JavaScript">
+document.write(datum);
+</SCRIPT>
+<BR>
+Momentalo vrijeme je:
+<SCRIPT LANGUAGE="JavaScript">
+document.write("<BR><BR><BR><H2><B><I><center>"+vrijeme+"</I></B></H2>");
+</SCRIPT>
+</BODY>
+</HTML>
