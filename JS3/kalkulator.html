@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>JavaScript i HTML form: Citiranje iz tekst polja, JavaScript funckija, jednostavni kalkulator</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function SumirajPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var suma=broj1+broj2;
+window.document.mojaforma.rezultat.value=suma;
+}
+
+function PomnoziPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var suma=broj1*broj2;
+window.document.mojaforma.rezultat.value=suma;
+}
+
+function PodijeliPolja()
+{
+var broj1=parseFloat(window.document.mojaforma.polje1.value);
+var broj2=parseFloat(window.document.mojaforma.polje2.value);
+var suma=broj1/broj2;
+window.document.mojaforma.rezultat.value=suma;
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM name="mojaforma">
+Broj 1:<INPUT TYPE="text" NAME="polje1"><BR>
+Broj 2:<INPUT TYPE="text" NAME="polje2"><BR>
+Rezultat:<INPUT TYPE="text" NAME="rezultat"><BR>
+<A HREF="#" onClick="SumirajPolja();"> Zbroji ih!</A>
+<A HREF="#" onClick="PomnoziPolja();"> Pomnozi ih!</A>
+<A HREF="#" onClick="PodijeliPolja();"> Podijeli ih!</A>
+</FORM>
+</BODY>
+</HTML>

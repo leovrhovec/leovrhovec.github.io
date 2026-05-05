@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>anketa</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function rezkviza() {
+    var tocnih = 0;
+
+    if (document.mojaforma.pitanje1.checked == true)
+        tocnih = tocnih + 1;
+    else
+        document.mojaforma.pitanje1.checked = true;
+
+    if (document.mojaforma.pitanje2.checked == true)
+        tocnih = tocnih + 1;
+    else
+        document.mojaforma.pitanje2.checked = true;
+
+    if (document.mojaforma.pitanje3.checked == false)
+        tocnih = tocnih + 1;
+    else
+        document.mojaforma.pitanje3.checked = false;
+
+    if (document.mojaforma.pitanje4.checked == true)
+        tocnih = tocnih + 1;
+    else
+        document.mojaforma.pitanje4.checked = true;
+
+    alert("Imate " + tocnih + " točnih odgovora! Pogledajte točne rezultate.");
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<H2>Odgovorite na sljedeća pitanja:</H2>
+
+<FORM NAME="mojaforma">
+<INPUT TYPE="checkbox" NAME="pitanje1"> Mazda je japanska firma <BR>
+<INPUT TYPE="checkbox" NAME="pitanje2"> Honda je japanska firma <BR>
+<INPUT TYPE="checkbox" NAME="pitanje3"> BMW je japanska firma <BR>
+<INPUT TYPE="checkbox" NAME="pitanje4"> Toyota je japanska firma <BR>
+
+<P>
+<INPUT TYPE="button" VALUE="Rezultati kviza" onClick="rezkviza();">
+</FORM>
+
+</BODY>
+</HTML>
