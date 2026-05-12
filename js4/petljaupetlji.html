@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>petlja u petlji</TITLE>
+</HEAD>
+
+<BODY>
+
+<p>Odaberi postavke:</p>
+
+Koliko redaka: 
+<select id="redaka" size="3">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+</select>
+
+<br><br>
+
+Koliko stupaca: 
+<select id="stupaca" size="3">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+</select>
+
+<br><br>
+
+<button onclick="generiraj()">Generiraj</button>
+
+<hr>
+
+<div id="rezultat"></div>
+
+<SCRIPT LANGUAGE="JavaScript">
+function generiraj() {
+	var redaka = document.getElementById("redaka").value;
+	var stupaca = document.getElementById("stupaca").value;
+	var rezultat = document.getElementById("rezultat");
+	
+	var html = "";
+	
+	for (var i = 0; i < redaka; i++) {
+		for (var j = 0; j < stupaca; j++) {
+			html += "nešto ";
+		}
+		html += "<BR>";
+	}
+	
+	rezultat.innerHTML = html;
+}
+</SCRIPT>
+
+</BODY>
+</HTML>
