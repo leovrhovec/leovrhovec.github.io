@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE> for petlja, cekiranje svih </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function cekirajsve()
+{
+	for (var i=0; i < window.document.mojaforma.elements.length; i++)
+	{
+	window.document.mojaforma.elements[i].checked=true;
+	}
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<H2> Iz kojih predmeta imate jedinice?</H2>
+<FORM NAME="mojaforma">
+<INPUT TYPE="checkbox">Engleski<BR>
+<INPUT TYPE="checkbox">Bosanski<BR>
+<INPUT TYPE="checkbox">Osnove Programiranja<BR>
+<INPUT TYPE="checkbox">Tjelesni<BR>
+<INPUT TYPE="checkbox">Osnove Elektrotehnike i Mjerenja<BR>
+<INPUT TYPE="checkbox">Osnove Elektroničkog Poslovanja<BR>
+<INPUT TYPE="checkbox">Uvod u web oblikovanje <BR>
+<INPUT TYPE="checkbox">Matematika I<BR>
+<INPUT TYPE="checkbox">Matematika II<BR>
+<INPUT TYPE="checkbox">Srpski<BR>
+<BR>
+<P>
+<INPUT TYPE="button" VALUE="Cekiraj sve" onClick="cekirajsve();">
+</FORM>
+</BODY>
+</HTML>

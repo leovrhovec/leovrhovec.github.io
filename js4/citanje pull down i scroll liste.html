@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE> citanje pull down i scroll liste </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+function savjet()
+{
+var indauto=window.document.mojaforma.auto.selectedIndex;
+var izabauto=window.document.mojaforma.auto.options[indauto].text;
+
+var indbrzina=window.document.mojaforma.brzina.selectedIndex;
+var izabbrzina=window.document.mojaforma.brzina.options[indbrzina].text;
+alert("Vaš/a " + izabauto + " vozi " + izabbrzina + ".");
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="mojaforma" >
+Vaš auto<BR>
+<SELECT NAME="auto" SIZE="1" >
+<OPTION> Mercedes
+<OPTION> Mazda
+<OPTION> Alfa Romeo
+</SELECT>
+
+<p>
+Brzina:<BR>
+<SELECT SIZE="3" NAME="brzina" >
+<OPTION>vrlo sporo
+<OPTION>sporo
+<OPTION>srednje sporo
+<OPTION>srednjom brzinom
+<OPTION>srednje brzo
+<OPTION>brzo
+<OPTION>vrlo brzo
+</SELECT>
+</p>
+<INPUT TYPE="button" VALUE="Savjet" onClick="savjet();">
+</BODY>
+</HTML>

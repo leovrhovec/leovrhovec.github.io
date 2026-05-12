@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE> CITANJE RADIO BUTTONA </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function poruka()
+{
+    if (window.document.mojaforma.pitanje[0].checked == true ||
+        window.document.mojaforma.pitanje[4].checked == true)
+    {
+        alert("i ja");
+    }
+
+    if (window.document.mojaforma.pitanje[1].checked == true || 
+        window.document.mojaforma.pitanje[2].checked == true || 
+        window.document.mojaforma.pitanje[3].checked == true)
+    {
+        alert("meni je bolje");
+    }
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="mojaforma" onClick="poruka();">
+Kako ste?<BR>
+
+<INPUT TYPE="radio" name="pitanje">
+Loše <BR>
+<INPUT TYPE="radio" name="pitanje">
+Dosadno <BR>
+<INPUT TYPE="radio" name="pitanje">
+U redu <BR>
+<INPUT TYPE="radio" name="pitanje">
+Dobro <BR>
+<INPUT TYPE="radio" name="pitanje">
+Super <BR>
+</FORM>
+</BODY>
+</HTML>
