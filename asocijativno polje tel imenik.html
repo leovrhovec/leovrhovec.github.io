@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE> asocijativno polje tel imenik </TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+var telime1=new Array();
+telime1["Leo"]="676-7676";
+telime1["Denis"]="676-6767";
+telime1["Erika"]="676-6677";
+telime1["Angela Merkel"]="676-1234";
+telime1["Donald Trump"]="676-4321";
+telime1["Joe Biden"]="676-2143";
+
+var telime2=new Array();
+telime2["Denis"]="1-1111";
+telime2["Joe Biden"]="1-2222";
+telime2["Leo"]="1-3333";
+telime2["Angela Merkel"]="1-4444";
+telime2["Donald Trump"]="1-5555";
+telime2["Erika"]="1-6666";
+
+var telime3=new Array();
+telime3["Joe Biden"]="2-1111";
+telime3["Erika"]="2-2222";
+telime3["Donald Trump"]="2-3333";
+telime3["Leo"]="2-4444";
+telime3["Denis"]="2-5555";
+telime3["Angela Merkel"]="2-6666";
+
+var telime4=new Array();
+telime4["Angela Merkel"]="3-1111";
+telime4["Denis"]="3-2222";
+telime4["Erika"]="3-3333";
+telime4["Leo"]="3-4444";
+telime4["Donald Trump"]="3-5555";
+telime4["Joe Biden"]="3-6666";
+
+function pokazibroj(telefonimenik,ulaz)
+{
+var broj=telefonimenik[ulaz];
+window.document.mojaforma.trazenibroj.value=broj;
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="mojaforma">
+Ime:
+<SELECT onChange="pokazibroj(telime2, this.options[this.selectedIndex].value);">
+<OPTION VALUE="Leo">Leo
+<OPTION VALUE="Denis">Denis
+<OPTION VALUE="Erika">Erika
+<OPTION VALUE="Angela Merkel">Angela Merkel
+<OPTION VALUE="Donald Trump">Donald Trump
+<OPTION VALUE="Joe Biden">Joe Biden
+</SELECT>
+<P>
+Broj:
+<INPUT TYPE="text" NAME="trazenibroj" VALUE="">
+</FORM>
+</BODY>
+</HTML>

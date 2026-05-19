@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE> Asocijativno polje drop lista boja</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var asocboje=new Array();
+asocboje["Leo"]="blue";
+asocboje["Denis"]="yellow";
+asocboje["Erika"]="black";
+asocboje["Donald Trump"]="orange";
+asocboje["Angela Merkel"]="green";
+asocboje["Joe Biden"]="red";
+
+var asocboje2=new Array();
+asocboje2["Leo"]="blue";
+asocboje2["Denis"]="yellow";
+asocboje2["Erika"]="black";
+asocboje2["Donald Trump"]="orange";
+asocboje2["Angela Merkel"]="green";
+asocboje2["Joe Biden"]="red";
+
+function promjeniboju(paleta,ulaz)
+{
+var boja=paleta[ulaz];
+window.document.bgColor=boja;
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="mojaforma">
+<SELECT onChange="promjeniboju(asocboje2, this.options[this.selectedIndex].value);">
+<OPTION VALUE="Leo">Leo
+<OPTION VALUE="Denis">Denis
+<OPTION VALUE="Erika">Erika
+<OPTION VALUE="Donald Trump">Donald Trump
+<OPTION VALUE="Angela Merkel">Angela Merkel
+<OPTION VALUE="Joe Biden">Joe Biden
+
+</BODY>
+</HTML>
