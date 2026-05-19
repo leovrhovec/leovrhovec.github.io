@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadatak - Forme</title>
+    <style>
+        body {
+            background-color: #777777;
+        }
+
+        .okvir-forme {
+            background-color: #ade0e5;
+            width: 300px;
+            padding: 20px;
+            margin-bottom: 20px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: 5px 5px 10px #000;
+            -webkit-box-shadow: 5px 5px 10px #000;
+            box-shadow: 5px 5px 10px #000;
+        }
+
+        .polje-za-broj {
+            background-color: #62a3a5;
+            color: white;
+            display: inline-block;
+            width: 150px;
+            padding: 2px;
+        }
+
+        select { 
+            margin-bottom: 15px; 
+        }
+
+        .redak { 
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="okvir-forme" id="prvaForma">
+        
+        <select id="listaImena" onchange="ispisiBrojeve(); promijeniBoju();">
+            <option value="nista">odaberi ime...</option>
+            <option value="luka">Luka</option>
+            <option value="marko">Marko</option>
+            <option value="ana">Ana</option>
+        </select>
+
+        <div class="redak">
+            Tel. broj: <span class="polje-za-broj" id="telBroj"></span>
+        </div>
+        
+        <div class="redak">
+            Mob. broj: <span class="polje-za-broj" id="mobBroj"></span>
+        </div>
+
+    </div>
+
+    <div class="okvir-forme">
+
+        <select id="listaDana" onchange="ispisiTekst();">
+            <option value="nista">odaberi dan...</option>
+            <option value="ponedjeljak">ponedjeljak</option>
+            <option value="utorak">utorak</option>
+            <option value="srijeda">srijeda</option>
+        </select>
+        
+        <br><br>
+
+        <textarea id="poljeZaTekst" rows="5" cols="30" style="background-color: #62a3a5; color: white;"></textarea>
+
+    </div>
+
+    <script>
+
+        function ispisiBrojeve() {
+            var odabrano = document.getElementById("listaImena").value;
+
+            if (odabrano == "luka") {
+                document.getElementById("telBroj").innerHTML = "555-2222";
+                document.getElementById("mobBroj").innerHTML = "093 222 222";
+            } else if (odabrano == "marko") {
+                document.getElementById("telBroj").innerHTML = "111-3333";
+                document.getElementById("mobBroj").innerHTML = "098 333 333";
+            } else if (odabrano == "ana") {
+                document.getElementById("telBroj").innerHTML = "222-4444";
+                document.getElementById("mobBroj").innerHTML = "091 444 444";
+            } else {
+                document.getElementById("telBroj").innerHTML = "";
+                document.getElementById("mobBroj").innerHTML = "";
+            }
+        }
+
+        function promijeniBoju() {
+            var odabrano = document.getElementById("listaImena").value;
+
+            if (odabrano == "luka") {
+                document.getElementById("prvaForma").style.backgroundColor = "#cccccc";
+            } else if (odabrano == "marko") {
+                document.getElementById("prvaForma").style.backgroundColor = "#99ccff";
+            } else if (odabrano == "ana") {
+                document.getElementById("prvaForma").style.backgroundColor = "#ffcc99";
+            } else {
+                document.getElementById("prvaForma").style.backgroundColor = "#ade0e5";
+            }
+        }
+
+        function ispisiTekst() {
+            var odabrano = document.getElementById("listaDana").value;
+
+            if (odabrano == "ponedjeljak") {
+                document.getElementById("poljeZaTekst").value = "dorucak:kruh\nrucak:grah\nvecera:jabuka";
+            } else if (odabrano == "utorak") {
+                document.getElementById("poljeZaTekst").value = "dorucak:pahuljice\nrucak:piletina\nvecera:jogurt";
+            } else if (odabrano == "srijeda") {
+                document.getElementById("poljeZaTekst").value = "dorucak:kruska\nrucak:lazanje\nvecera:nista";
+            } else {
+                document.getElementById("poljeZaTekst").value = "";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
