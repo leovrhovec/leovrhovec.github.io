@@ -1,0 +1,52 @@
+<html>
+<head>
+<TITLE>Vježba Vremensko upravljani prikaz</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var slike=new Array();
+slike[0]= new Image();
+slike[0].src="1.jpg";
+
+slike[1]= new Image();
+slike[1].src="2.jpg";
+
+slike[2]= new Image();
+slike[2].src="3.jpg";
+
+slike[3]= new Image();
+slike[3].src="4.jpg";
+
+slike[4]= new Image();
+slike[4].src="5.jpg";
+
+slike[5]= new Image();
+slike[5].src="6.jpg";
+
+var vrijeme;
+var indeks=0;
+function zamjenisliku()
+{
+	window.document.mojaslika.src=slike[indeks].src;
+	indeks++
+	if (indeks >=slike.length)
+	{
+		indeks=0;
+	}
+	
+	vrijeme=setTimeout("zamjenisliku();",1000);
+}
+
+</SCRIPT>
+</HEAD>
+  
+<body BGCOLOR="black" text="red">
+<center>
+<img name="mojaslika" src="4.jpg" height="600" width="450"   >
+<p>
+<FORM>
+<input type="button" value="Slide show" onClick="clearTimeout(vrijeme); zamjenisliku();">
+<input type="button" value="Zaustavi" onClick="clearTimeout(vrijeme);">
+</FORM>
+</center>
+</body>
+</html>
