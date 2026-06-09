@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak - Layeri i pozicioniranje</title>
+    <style>
+        /* Osnovni izgled gumba */
+        button {
+            margin-right: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        /* Zajednički stilovi za sve divove */
+        .box {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Sjena za vizualni efekt */
+        }
+
+        /* Hover efekt - postavlja aktivni element iznad svih ostalih */
+        .box:hover {
+            z-index: 99 !important;
+        }
+
+        /* Pojedinačne pozicije, dimenzije i z-indexi */
+        .box-1 {
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background-image: url('1.jpg');
+            z-index: 1;
+        }
+
+        .box-2 {
+            top: 150px;
+            left: 150px;
+            width: 200px;
+            height: 200px;
+            background-image: url('2.jpg');
+            z-index: 2;
+        }
+
+        .box-3 {
+            top: 200px;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            background-image: url('3.jpg');
+            z-index: 3;
+        }
+
+        .box-4 {
+            top: 300px;
+            left: 350px;
+            width: 200px;
+            height: 200px;
+            background-image: url('4.jpg');
+            z-index: 4;
+        }
+
+        /* Peta slika ima ekstenziju .jpeg prema popisu datoteka */
+        .box-5 {
+            top: 350px;
+            left: 300px;
+            width: 200px;
+            height: 200px;
+            background-image: url('5.jpeg');
+            z-index: 5;
+        }
+
+        /* Sivi div na poziciji 6 */
+        .box-6 {
+            top: 250px;
+            left: 0px;
+            width: 350px;
+            height: 200px;
+            background-color: #808080;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button id="btn-lijevo">u lijevo</button>
+        <button id="btn-desno">u desno</button>
+    </div>
+
+    <!-- 6 div elemenata -->
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+    <div class="box box-4"></div>
+    <div class="box box-5"></div>
+    <div id="sivi-div" class="box box-6"></div>
+
+    <script>
+        const siviDiv = document.getElementById('sivi-div');
+        const btnLijevo = document.getElementById('btn-lijevo');
+        const btnDesno = document.getElementById('btn-desno');
+
+        // Pomicanje sivog elementa u lijevo za 20px
+        btnLijevo.addEventListener('click', () => {
+            const trenutniLeft = parseInt(window.getComputedStyle(siviDiv).left) || 0;
+            siviDiv.style.left = (trenutniLeft - 20) + 'px';
+        });
+
+        // Pomicanje sivog elementa u desno za 20px
+        btnDesno.addEventListener('click', () => {
+            const trenutniLeft = parseInt(window.getComputedStyle(siviDiv).left) || 0;
+            siviDiv.style.left = (trenutniLeft + 20) + 'px';
+        });
+    </script>
+
+</body>
+</html>
